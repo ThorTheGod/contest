@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cnki.dao.UserMapper">
+    <insert id="addUser" parameterType="User">
+        INSERT into
+        ssmbuild.user(username,password,birthday,school,college,duty,contact,email)
+        values
+        (#{username},#{password},#{birthday},#{school},#{college},#{duty},#{contact},#{email});
+    </insert>
+    <delete id="deleteUserByUserId"
+            parameterType="int">
+        delete from ssmbuild.user where
+        userId=#{userId};
+    </delete>
+
+    <update id="updateUser" parameterType="User">
+        update ssmbuild.user set
+        username=#{username},password=#{password},birthday=#{birthday},school=#{school},college=#{college},duty=#{duty},contact=#{contact},email=#{email} where userId=${userId};
+    </update>
+
+    <select id="queryUserByUsername"
+            resultType="User">
+        select * from ssmbuild.user where
+        username=#{username}
+    </select>
+
+    <select id="queryUserByUserId"
+            resultType="User">
+        select * from ssmbuild.user where
+        userId=#{userId}
+    </select>
+
+    <select id="queryAllUser" resultType="User">
+        select * from ssmbuild.user
+    </select>
+
+
+
+
+
+
+
+</mapper>

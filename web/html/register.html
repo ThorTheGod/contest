@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>注册</title>
+        <link rel="stylesheet" type="text/css" href="../css/register.css">
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script src="../js/login2.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script src="../js/register.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script src="../js/login.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script src="../js/exit.js"></script>
+    </head>
+    <body>
+        <div id='section1'>     
+            <div class='nav'>
+                <ul class='navbar'>
+                    <span id='nav1' style="float:left">
+                    <li style="width: 150px"><a href="../html/mainweb.html"> 首页</a></li>
+                    <li><a href="../html/about.html">关于竞赛</a></li>
+                    <li id="nav13"><a>我要参赛</a></li>
+                    <li style="width: 150px"><a href="../html/ranking.html">排行榜</a></li>
+                    </span>
+                    <span id='nav2'>
+                    <li id='nav22' style="padding: 22px 10px;float:right;"><a href="../html/register.html">注册</a></li>
+                    <li id='nav21' style="padding: 22px 10px;float:right;"><a>登录</a></li>
+                    <a href="javascript:hphide()"><img id="hp" src='../image/head-portrait.png'/></a>
+                    </span>
+                </ul>
+            </div>
+            <div id='img1'></div>
+        </div>
+
+        <div class="s-nav">       
+            <div class="box1">
+                <p><img src="../image/position.png" align="left" style="margin-right: 17px;">首页 | 注册</p>
+            </div>
+        </div>
+        <div class='box3'>
+            <div id='registerDiv'>
+                <form id='registerform'>
+                    用户名 <input id='username' type="text" name='username' style="width: 30%;" required="required">
+                    <button id='check'><input type='submit' value="查重"></button>
+                    <span style="margin-left: 18%;position: relative;">
+                    密码 <input id="password" type="password" name="password" style="width: 30%;" required="required">
+                    </span><br>
+
+                    所在单位 <select name='school' style="width: 14%;">
+                        <option value=""></option>
+                        <option value="西安电子科技大学">西安电子科技大学</option>
+                        <option value="成都电子科技大学">成都电子科技大学</option>
+                        <option value="北京交通大学">北京交通大学</option>
+                        <option value="西安交通大学">西安交通大学</option>
+                        </select>
+                        <select name='college' style="width:14%;">
+                        <option value=""></option>
+                        <option value="经济与管理学院">经济与管理学院</option>
+                        <option value="通信工程学院">通信工程学院</option>
+                        <option value="网络与信息安全学院">网络与信息安全学院</option>
+                        <option value="机电工程学院">机电工程学院</option>
+                        <option value="计算机科学与技术学院">计算机科学与技术学院</option>
+                        </select>
+                    <span style="margin-left: 23.5%;position: relative;">
+                    职务 <input type="text" name="duty" style="width: 30%;">
+                    </span><br>
+
+                    出生年月 <input type="date" name="birthday" style="width: 30%;">
+                    <span style="margin-left: 22%;position: relative;">
+                    邮箱 <input id="email" type="email" name="email" style="width: 30%;" required="required">
+                        <button id="vCode"><input type="submit" value="验证码"></button>
+                    </span><br>
+
+                    联系电话 <input type="tel" name="contact" style="width: 30%;">
+                    <span style="margin-left: 22%;">
+                    验证码 <input type="tel" name="authenticationCode" style="width: 28%;" required="required">
+                    </span>
+                </form>
+
+                <div>
+                    <a class="r-button1">立即注册</a>
+                    <span>
+                    <a href="javascript:loginshow()" class="r-button2">已有账号，立即登录</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id='footer'>
+            <ul class="clearfix">
+            <div class='box4' style="margin-left: 6%;">
+                <img src="../image/cnki-logo.png" width="140" height="47" />
+                <br/>
+                <br/>
+                <p>技术支持：同方知网（北京）技术有限公司陕西分公司</p>
+                <p>地址：陕西省西安市高新区锦业一路56号研祥城市广场A座2505</p>
+            </div>
+            <div class="box4" style="margin-left: 10%;">
+                <img src="../image/xidian-logo.png" width="224" height="60" />
+                <p>合作单位：西安电子科技大学</p>
+                <p>地址：陕西省西安市西沣路兴隆段266号（南校区）</p>
+            </div>
+            </ul>
+        </div>
+
+        <div id='login'>
+            <div class="login-box">
+                <div style="float: right;"><a href="javascript:loginhide()" style="text-decoration: none;color: black;"><img alt="" src="../image/close.png"/></a></div>
+                <div class="login-logo"><img alt="" src="../image/login-image.png"/></div>
+                <div class="login-box1">
+                    <p>登录</p>
+                </div>
+                <div class="login-box2">
+                    <form id="loginform">
+                        <input type="text" name='username' placeholder="用户名">
+                        <img alt="" src="../image/box.png" style="transform: translate(-150%,20%);"/>
+    
+                        <input type="password" name="pwd" placeholder="密码">
+                        <img alt="" src="../image/password.png" style="transform: translate(-150%,30%);"/>
+                    </form>
+                </div>
+                
+                <div class="l-button1">登录</div>
+                <div class='l-button2'>
+                    还没有账号？<a href="../html/register.html" style="text-decoration: none;color: dodgerblue;">去注册></a>
+                </div>
+            </div>
+        </div>
+        <script src="../js/login.js"></script>
+
+        <div id='exit'>
+            <div class="exit-box">
+                <div class="exit-box1">
+                    <b>退出确认</b>
+                </div>
+                <div class="exit-box2">
+                    <p>您是否要退出登录？</p>
+                </div>
+                <div>
+                    <button class="e-button2"><a href="../html/mainweb.html" style="text-decoration: none;color: white;">确认退出</a></button>
+                    <span>
+                    <button class="e-button1"><a href="javascript:exithide()" style="text-decoration: none;color: black;">返回</a></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script src='../js/exit.js'></script>
+    </body>
+</html>

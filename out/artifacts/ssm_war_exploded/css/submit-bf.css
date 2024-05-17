@@ -1,0 +1,92 @@
+#submit-bf
+{
+ z-index: 2;
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+}
+.st-box
+{
+ vertical-align: middle;
+ width: auto;
+ height: auto;
+ padding: 20px;
+ box-shadow: 0 0 10px rgb(177, 175, 175);
+ border-style: solid;
+ border-radius: 10px;
+ border-width: 0.2px;
+ border-color: gray;
+ background: white;
+ position: fixed;
+ left: 40%;
+ top: 30%;
+}
+.st-box1
+{
+ font-size: 20px;
+ font-family: '微软雅黑';
+ font-weight: 550;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ text-align: center;
+}
+.st-box1 b
+{
+ letter-spacing: 2px;
+ color: black;
+}
+.st-box2
+{
+ margin-top: 3%;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ padding: 5%;
+ border-top-style: solid;
+ border-color: darkgray;
+ border-width: 0.5px;
+ text-align: center;
+}
+.st-box2 p
+{
+ color: black;
+ font-size: 14px;
+}
+
+.st-button1
+{
+ text-align: center;
+ display: inline-block;
+ text-decoration: none;
+ font-size: 14px;
+ cursor: pointer;
+ border-radius: 30px;
+ margin-bottom: 15px;
+ font-family: '微软雅黑';
+ padding: 15px 32px;
+ background-color: rgb(255,255,255);
+ color: black;
+ border: none;
+ border-style: solid;
+ border-width: 1.5px;
+ border-color: rgb(218, 218, 218);
+ width: auto;
+}
+.st-button2
+{
+ text-align: center;
+ display: inline-block;
+ text-decoration: none;
+ font-size: 14px;
+ cursor: pointer;
+ border-radius: 30px;
+ margin-bottom: 15px;
+ font-family: '微软雅黑';
+ padding: 15px 32px;
+ background-color: rgb(248,181,81);
+ color: white;
+ border: none;
+}

@@ -1,0 +1,310 @@
+body,ul,li,a
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    color: white;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+#section1
+{
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+     text-align: center;
+}
+/*导航栏*/
+.nav
+{
+    height: 75px;
+    position: relative;
+    background-color: rgba(148,116,116,0.8);
+}
+.navbar
+{
+    margin: 0 auto;
+    position: absolute;
+    list-style-type: none;
+    overflow-y: auto;
+    width: 100%;
+}
+.navbar img
+{
+    float: right;
+    margin-top: 5px;
+}
+.navbar li
+{
+    padding: 22px 20px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+.navbar li:hover
+{
+    border-radius:0 0 10px 10px;
+    background-color:rgba(255, 0, 0, 0.6)
+}
+.navbar a
+{
+    display: block;
+    font-family: '微软雅黑';
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+/*版头*/
+#img1
+{
+    display: block;
+    margin-top: -75px;
+    width: 100%;
+    height: 900px;
+    background-image: url(../image/header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+ /*我要参赛按钮*/
+#section1 .btn
+{
+    position: absolute;
+    background-color: rgb(248,181,81);
+    color: white;
+    font-size: 24px;
+    font-family: '微软雅黑';
+    letter-spacing: 2px;
+    padding: 15px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+    top: 780.5px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+*{
+    box-sizing: border-box;
+}
+/*赛事简介*/
+.box1
+{
+    float: left;
+    width: 65%;
+    margin-top: 22px;
+    padding: 0px 50px 30px 0px;
+    color: black;
+    background-image: url(../image/bg1.png);
+    /*background-size: 253px 80px;*/
+    background-repeat: no-repeat;
+}
+ /*排行榜*/
+.box2
+{
+    float: left;
+    width: 25%;
+    margin-top: 22px;
+    background-image: url(../image/bg2.png);
+    /*background-size: 205px 80px;*/
+    background-repeat: no-repeat;
+    background-position: 40% 0%;
+    text-align: center;
+}
+/*页脚*/
+.box3
+{
+    width: 38%;
+    float: left;
+}
+
+.clearfix::after
+{
+    content: '';
+    clear: both;
+    display: table;
+}
+.box1 img
+{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    max-width: 90%;
+    height: auto;
+}
+.box2 a
+{
+    color:cornflowerblue;
+    font-size: 14px;
+    float: right;
+}
+.box2 table
+{
+    float: none;
+    padding: 10px 20px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+}
+.box1 h1
+{
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 95px;
+    letter-spacing: 4px;
+    font-family: '微软雅黑';
+}
+.box2 h2
+{
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 18px;
+    font-family: '微软雅黑';
+    letter-spacing: 4px;
+}
+.box1 p
+{
+    color:black;
+    font-size: '微软雅黑';
+    font-size: 17px;
+    font-weight: normal;
+    text-indent: 32px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+.box3 p
+{
+    font-size: 12px;
+    text-align: left;
+    font-family: '微软雅黑';
+    letter-spacing: 1px;
+}
+.box3 img
+{
+    display: inline-block;
+}
+#rank td,#rank th
+{
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    border: 1px solid black;
+    padding: 20px 15px;
+}
+#footer
+{
+    margin:50px 0 0 0;
+    text-align: left;
+    width: 100%;
+    clear: both;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    background-color: rgb(160,160,160);
+    padding: 20px 30px;
+}
+ 
+#exit
+{
+ z-index: 2;
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+}
+.exit-box
+{
+ vertical-align: middle;
+ width: auto;
+ height: auto;
+ padding: 20px;
+ box-shadow: 0 0 10px rgb(177, 175, 175);
+ border-style: solid;
+ border-radius: 10px;
+ border-width: 0.2px;
+ border-color: gray;
+ background: white;
+ position: fixed;
+ left: 40%;
+ top: 30%;
+}
+.exit-box1
+{
+ font-size: 20px;
+ font-family: '微软雅黑';
+ font-weight: 550;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ text-align: center;
+}
+.exit-box1 b
+{
+ letter-spacing: 2px;
+ color: black;
+}
+.exit-box2
+{
+ margin-top: 3%;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ padding: 5%;
+ border-top-style: solid;
+ border-color: darkgray;
+ border-width: 0.5px;
+ text-align: center;
+}
+.exit-box2 p
+{
+ color: black;
+ font-size: 14px;
+}
+.e-button1
+{
+ text-align: center;
+ display: inline-block;
+ text-decoration: none;
+ font-size: 14px;
+ cursor: pointer;
+ border-radius: 10px;
+ margin-bottom: 15px;
+ font-family: '微软雅黑';
+ background-color: rgb(255,255,255);
+ color: black;
+ border: none;
+ border-style: solid;
+ border-width: 1.5px;
+ border-color: rgb(218, 218, 218);
+ width: auto;
+ padding: 15px 32px;
+}
+.e-button2
+{
+ text-align: center;
+ display: inline-block;
+ text-decoration: none;
+ font-size: 14px;
+ cursor: pointer;
+ border-radius: 10px;
+ margin-bottom: 15px;
+ font-family: '微软雅黑';
+ background-color: rgb(248,181,81);
+ color: white;
+ border: none;
+ padding: 15px 22px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>知识答题竞赛--题目上传</title>
+    <link rel="stylesheet" type="text/css" href="../css/upload.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/upload.js"></script>
+</head>
+<body>
+    <div id='section1'>     
+        <div class='nav'>
+            <ul class='navbar'>
+                <span style="float:left" id="nav1">
+                    <li id="nav11" style="width: 150px"><a href="../html/mainweb.html"> 首页</a></li>
+                    <li id="nav12"><a href="../html/about.html">关于竞赛</a></li>
+                    <li id="nav13"><a href="../html/competition.html">我要参赛</a></li>
+                    <li id="nav14" style="width: 150px"><a href="../html/ranking.html">排行榜</a></li>
+                    <li id="nav15"><a href="../html/upload.html">题目上传</a></li>
+                </span>
+                <span id="nav2">
+                <li id="nav21" style="padding: 22px 10px;float:right"><a href="javascript:exitshow()">退出</a></li>
+                <li id="nav22" style="padding: 22px 10px;float:right"><a>欢迎管理员</a></li>
+                <img src='../image/head-portrait.png' style="float: right;margin-top: 5px;"/>
+                </span>
+            </ul>
+        </div>
+        <div id='img1'></div>
+    </div>
+
+    <div id="section2">
+        <div class="box1">
+            <p><img src="../image/position.png" align="left" style="margin-right: 17px;">首页 | 题目上传</p>
+        </div><br>
+    </div>
+
+    <div class="box2">
+        <p>上传规则：<br>
+        1.仅系统管理员可以进行题目上传。<br>
+        2.请将题目写入Excel文件后再进行上传。<br>
+        3.Excel文件中第一列应为：题目类型（单选/填空）；第二列应为：题干；第三列应为：答案；其后几列分别为：选项A、B、C和D四个选项或对、错。<br>
+        4.Excel题库文件大小不受限制。<br>
+        5.若Excel题库存在问题，管理员直接重新上传即可，无须删除历史题目记录。<br>
+        6.Excel题库上传成功后，系统将根据题库随机生成试卷，并在用户完成答题后自动问卷并排名。
+    </p>
+    <form id='uploadForm' enctype="multipart/form-data">
+    <input id='file' type="file" name="file">
+    </form>
+    <button class="btn-upload"><p><img src="../image/upload-logo.png" align='left' style="margin-right: 12px;"/>
+        <a style="text-decoration: none;color: white;">立即上传题库</a></p>
+    </button>
+    </div>
+
+    <div id='footer'>
+        <ul class="clearfix">
+        <div class='box3' style="margin-left: 6%;">
+            <img src="../image/cnki-logo.png" width="140" height="47" />
+            <br/>
+            <br/>
+            <p>技术支持：同方知网（北京）技术有限公司陕西分公司</p>
+            <p>地址：陕西省西安市高新区锦业一路56号研祥城市广场A座2505</p>
+        </div>
+        <div class="box3" style="margin-left: 10%;">
+            <img src="../image/xidian-logo.png" width="224" height="60" />
+            <p>合作单位：西安电子科技大学</p>
+            <p>地址：陕西省西安市西沣路兴隆段266号（南校区）</p>
+        </div>
+        </ul>
+    </div>
+
+
+    <div id='exit'>
+        <div class="exit-box">
+            <div class="exit-box1">
+                <b>退出确认</b>
+            </div>
+            <div class="exit-box2">
+                <p>您是否要退出登录？</p>
+            </div>
+            <div>
+                <button class="e-button2"><a href="../html/mainweb.html" style="text-decoration: none;color: white;">确认退出</a></button>
+                <span>
+                <button class="e-button1"><a href="javascript:exithide()" style="text-decoration: none;color: black;">返回</a></button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="../js/exit.js"></script>
+</body>
+</html>

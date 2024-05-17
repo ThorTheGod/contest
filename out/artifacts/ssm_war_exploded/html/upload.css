@@ -1,0 +1,254 @@
+body,ul,li,a
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    color: white;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+#section1
+{
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+     text-align: center;
+}
+/*导航栏*/
+.nav
+{
+    height: 75px;
+    position: relative;
+    background-color: rgba(148,116,116,0.8);
+}
+.navbar
+{
+    margin: 0 auto;
+    position: absolute;
+    list-style-type: none;
+    overflow-y: auto;
+    width: 100%;
+}
+.navbar li
+{
+    padding: 22px 20px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+.navbar li:hover
+{
+    border-radius:0 0 10px 10px;
+    background-color:rgba(255, 0, 0, 0.6)
+}
+.navbar a
+{
+    display: block;
+    font-family: '微软雅黑';
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+/*版头*/
+#img1
+{
+    display: block;
+    margin-top: -75px;
+    width: 100%;
+    height: 275px;
+    background-image: url(../image/头图2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/*标签*/
+#section2
+{
+    margin: 66px auto 30px 33px;
+    display: block;
+}
+
+*{
+    box-sizing: border-box;
+}
+.box1
+ {
+     width: 20%;
+     float: left;
+     text-align: left;
+ }
+ .box1 p
+ {
+     font-size: 20px;
+     text-align: left;
+     font-weight: bold;
+     font-family: '微软雅黑';
+     color: rgba(125, 124, 119, 1);
+     letter-spacing: 1px;
+ }
+ .clearfix::after
+{
+    content: '';
+    clear: both;
+    display: table;
+}
+ /*主体*/
+ .box2
+ {
+     margin: 62px auto 30px auto;
+     width: 95%;
+     padding: 33px 18px 42px 18px;
+     border-style: solid;
+     border-width: 1px;
+     border-color:rgb(160,160,160)
+ }
+ .box2 p
+{
+    color:rgb(87,83,83);
+    font-size: '微软雅黑';
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+.btn
+{
+ display: block;
+ text-decoration: none;
+ width: auto;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 5%;
+ cursor: pointer;
+ border-radius: 30px;
+ border: none;
+ margin-bottom: 15px;
+ background-color: rgb(248,181,81);
+}
+.btn p
+{
+    text-align: center;
+    font-size: 18px;
+    font-family: '微软雅黑';
+    font-weight: normal;
+}
+ /*页脚*/
+ .box3
+{
+    width: 38%;
+    float: left;
+}
+.box3 p
+{
+    font-size: 12px;
+    text-align: left;
+    font-family: '微软雅黑';
+    letter-spacing: 1px;
+}
+.box3 img
+{
+    display: inline-block;
+}
+#footer
+{
+    text-align: left;
+    width: 100%;
+    clear: both;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    background-color: rgb(160,160,160);
+    padding: 20px 30px;
+}
+
+#exit
+{
+ z-index: 2;
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+}
+.exit-box
+{
+ vertical-align: middle;
+ width: auto;
+ height: auto;
+ padding: 20px;
+ box-shadow: 0 0 10px rgb(177, 175, 175);
+ border-style: solid;
+ border-radius: 10px;
+ border-width: 0.2px;
+ border-color: gray;
+ background: white;
+ position: fixed;
+ left: 40%;
+ top: 30%;
+}
+.exit-box1
+{
+ font-size: 20px;
+ font-family: '微软雅黑';
+ font-weight: 550;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ text-align: center;
+}
+.exit-box1 b
+{
+ letter-spacing: 2px;
+ color: black;
+}
+.exit-box2
+{
+ margin-top: 3%;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ padding: 5%;
+ border-top-style: solid;
+ border-color: darkgray;
+ border-width: 0.5px;
+ text-align: center;
+}
+.exit-box2 p
+{
+ color: black;
+ font-size: 14px;
+}
+.e-button
+{
+ padding: 15px 32px;
+ text-align: center;
+ display: inline-block;
+ text-decoration: none;
+ font-size: 14px;
+ cursor: pointer;
+ border-radius: 10px;
+ margin-bottom: 15px;
+ font-family: '微软雅黑';
+}
+.e-button1
+{
+ background-color: rgb(255,255,255);
+ color: black;
+ border: none;
+ border-style: solid;
+ border-width: 2px;
+ border-color: rgb(218, 218, 218);
+ width: auto;
+}
+.e-button2
+{
+ background-color: rgb(248,181,81);
+ color: white;
+ border: none;
+}

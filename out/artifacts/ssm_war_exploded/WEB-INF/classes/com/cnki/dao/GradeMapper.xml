@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cnki.dao.GradeMapper">
+    <insert id="addGrade" parameterType="Grade">
+        INSERT into
+        ssmbuild.grade(userId,grade,time)
+        values
+        (#{userId},#{grade},#{time});
+    </insert>
+
+    <select id="queryRankByUserId" resultType="Grade">
+        select
+        * from
+        ssmbuild.grade where
+        grade.userId = #{userId};
+    </select>
+
+    <resultMap id="UserRank" type="com.cnki.pojo.UserRank">
+        <association property="user"
+                     javaType="com.cnki.pojo.User">
+            <id property="userId" column="userId"/>
+            <result property="username" column="username"/>
+            <result property="school" column="school"/>
+            <result property="college" column="college"/>
+            <result property="contact" column="contact"/>
+        </association>
+        <association property="grade"
+                     javaType="com.cnki.pojo.Grade">
+            <id property="gradeId" column="gradeId"/>
+            <result property="userId" column="userId"/>
+            <result property="grade" column="grade"/>
+            <result property="time" column="time"/>
+        </association>
+    </resultMap>
+    <select id="queryAllGrade" resultMap="UserRank">
+        select * from ssmbuild.grade a,ssmbuild.user b where
+         a.userId = b.userId;
+    </select>
+
+
+
+    <resultMap id="UserRankWithSchool"
+               type="com.cnki.pojo.UserRank">
+        <association property="user"
+                     javaType="com.cnki.pojo.User">
+            <id property="userId" column="userId"/>
+            <result property="username" column="username"/>
+            <result property="school" column="school"/>
+            <result property="contact" column="contact"/>
+        </association>
+        <association property="grade"
+                     javaType="com.cnki.pojo.Grade">
+            <id property="gradeId" column="gradeId"/>
+            <result property="userId" column="userId"/>
+            <result property="grade" column="grade"/>
+            <result property="time" column="time"/>
+        </association>
+    </resultMap>
+    <select id="queryUserByGradeAndSchool" resultMap="UserRankWithSchool">
+        select * from ssmbuild.grade a,ssmbuild.user b where
+         a.userId = b.userId and b.school=#{school};
+    </select>
+
+
+    <resultMap id="UserRankWithSchoolAndCollege" type="com.cnki.pojo.UserRank">
+        <association property="user"
+                     javaType="com.cnki.pojo.User">
+            <id property="userId" column="userId"/>
+            <result property="username" column="username"/>
+            <result property="school" column="school"/>
+            <result property="college" column="college"/>
+            <result property="contact" column="contact"/>
+        </association>
+        <association property="grade"
+                     javaType="com.cnki.pojo.Grade">
+            <id property="gradeId" column="gradeId"/>
+            <result property="userId" column="userId"/>
+            <result property="grade" column="grade"/>
+            <result property="time" column="time"/>
+        </association>
+    </resultMap>
+    <select id="queryUserByGradeAndSchoolAndCollege" resultMap="UserRankWithSchoolAndCollege">
+        select * from ssmbuild.grade a,ssmbuild.user b where
+         a.userId = b.userId and b.school=#{school} and b.college=#{college};
+    </select>
+    <!--
+    <select id="queryAllGrade" resultType="">
+    </select>
+    resultmap的多表联查
+    <resultMap id="UserRank" type="com.cnki.pojo.UserRank">
+        <id property="userId" column="userId"/>
+        <result property="school" column="school"/>
+        <result property="college" column="college"/>
+        <result property="contact" column="contact"/>
+        <association property="grade"
+                     javaType="com.cnki.pojo.Grade">
+            <result property="grade" column="grade"/>
+            <result property="time" column="time"/>
+        </association>
+    </resultMap>
+    <select id="queryRankByUserId" resultMap="UserRank">
+        select
+        user.userId,user.school,user.college,user.contact,grade.grade,grade.time from
+        ssmbuild.user,ssmbuild.grade where
+        grade.userId = #{userId} and user.userId = #{userId};
+    </select>
+    -->
+
+</mapper>

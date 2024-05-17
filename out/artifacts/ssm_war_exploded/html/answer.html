@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>答题</title>
+    <link rel="stylesheet" type="text/css" href="../css/Answer.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/Answer.js"></script>
+
+</head>
+<script>
+    /* js代码 */
+    $(window).on('scroll', function () {
+        // 判断显示还是隐藏按钮
+        if($(this).scrollTop()>=$(this).height()){
+            $('#top').fadeIn('slow');
+        }else {
+            $('#top').fadeOut('slow');
+        }
+    });
+    $('#top').on('click',function () {
+        // 设置滚动动画，这里注意使用的是$('body')不是$(window)
+        $('body').animate({scrollTop:'0'},500);
+    });
+</script>
+<body>
+    <div id='section1'>     
+        <div class='nav'>
+            <ul class='navbar'>
+                <span style="float:left">
+                <li style="width: 150px"><a href="../html/mainweb.html"> 首页</a></li>
+                <li><a href="">关于竞赛</a></li>
+                <li><a href="">我要参赛</a></li>
+                <li style="width: 150px"><a href="">排行榜</a></li>
+                </span>
+                <span>
+                <li style="padding: 22px 10px;float:right"><a href="javascript:show()">退出</a></li>
+                <li style="padding: 22px 10px;float:right"><a href="">欢迎**用户1**</a></li>
+                <img src='../image/headportrait.png' style="float: right;margin-top: 5px;"/>
+                </span>
+            </ul>
+        </div>
+        <div id='img1'>        
+        </div>
+    </div>
+
+    <div id="section2">
+        <div>
+            <div id="time"></div>
+        </div>
+        <div>
+            <img src='../image/countdown.png' style="float: right;margin-right: 5px;margin-top: 25px;"/>
+        </div>
+<!--        <div>-->
+<!--            <button class="btn"><a id="submit" style="text-decoration: none;color: white;">交卷</a></button>-->
+<!--        </div>-->
+    </div>
+
+    <div class='box2'>
+        <div id="test">
+            <ul>
+                <a></a><p id="title_0"></p>
+                <a></a><br><input type="radio" name="radio1" value="A"><span
+                    style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="1"></span><br>
+                <a></a><br><input type="radio" name="radio1" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;"  id="2"></span><br>
+                <a></a><br><input type="radio" name="radio1" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="3"></span><br>
+                <a></a><br><input type="radio" name="radio1" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="4"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_1"></p>
+                <a></a><br><input type="radio" name="radio2" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="5"></span><br>
+                <a></a><br><input type="radio" name="radio2" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="6"></span><br>
+                <a></a><br><input type="radio" name="radio2" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="7"></span><br>
+                <a></a><br><input type="radio" name="radio2" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="8"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_2"></p>
+                <a></a><br><input type="radio" name="radio3" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="9"></span><br>
+                <a></a><br><input type="radio" name="radio3" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="10"></span><br>
+                <a></a><br><input type="radio" name="radio3" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="11"></span><br>
+                <a></a><br><input type="radio" name="radio3" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="12"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_3"></p>
+                <a></a><br><input type="radio" name="radio4" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="13"></span><br>
+                <a></a><br><input type="radio" name="radio4" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="14"></span><br>
+                <a></a><br><input type="radio" name="radio4" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="15"></span><br>
+                <a></a><br><input type="radio" name="radio4" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="16"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_4"></p>
+                <a></a><br><input type="radio" name="radio5" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="17"></span><br>
+                <a></a><br><input type="radio" name="radio5" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="18"></span><br>
+                <a></a><br><input type="radio" name="radio5" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="19"></span><br>
+                <a></a><br><input type="radio" name="radio5" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="20"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_5"></p>
+                <a></a><br><input type="radio" name="radio6" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="21"></span><br>
+                <a></a><br><input type="radio" name="radio6" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="22"></span><br>
+                <a></a><br><input type="radio" name="radio6" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="23"></span><br>
+                <a></a><br><input type="radio" name="radio6" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="24"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_6"></p>
+                <a></a><br><input type="radio" name="radio7" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="25"></span><br>
+                <a></a><br><input type="radio" name="radio7" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="26"></span><br>
+                <a></a><br><input type="radio" name="radio7" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="27"></span><br>
+                <a></a><br><input type="radio" name="radio7" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="28"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_7"></p>
+                <a></a><br><input type="radio" name="radio8" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="29"></span><br>
+                <a></a><br><input type="radio" name="radio8" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="30"></span><br>
+                <a></a><br><input type="radio" name="radio8" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="31"></span><br>
+                <a></a><br><input type="radio" name="radio8" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="32"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_8"></p>
+                <a></a><br><input type="radio" name="radio9" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="33"></span><br>
+                <a></a><br><input type="radio" name="radio9" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="34"></span><br>
+                <a></a><br><input type="radio" name="radio9" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="35"></span><br>
+                <a></a><br><input type="radio" name="radio9" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="36"></span><br>
+                <hr>
+            </ul>
+            <ul>
+                <a></a><p id="title_9"></p>
+                <a></a><br><input type="radio" name="radio10" value="A"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="37"></span><br>
+                <a></a><br><input type="radio" name="radio10" value="B"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="38"></span><br>
+                <a></a><br><input type="radio" name="radio10" value="C"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="39"></span><br>
+                <a></a><br><input type="radio" name="radio10" value="D"><span style="color: black;font-family: '微软雅黑';font-size: 16px;font-weight: bold;line-height: 20px;letter-spacing: 1px;text-align:justify;" id="40"></span><br>
+                <hr>
+            </ul>
+        </div>
+        <div>
+            <button id="nextpage"  style="margin-left: 116px;background-color: orange;"><a
+                    style="text-decoration: none;color: white;">下一页</a></button>
+        </div>
+        <div>
+            <button id="submit" style="margin-left: 167px;background-color:rgba(166, 166, 166, 1);width:
+            140px;"><a>交卷</a></button>
+        </div>
+    </div>
+
+    <div id='footer'>
+        <ul class="clearfix">
+        <div class='box3' style="margin-left: 6%;">
+            <img src="../image/zhiwang.png" width="140" height="47" />
+            <br/>
+            <br/>
+            <p>技术支持：同方知网（北京）技术有限公司陕西分公司</p>
+            <p>地址：陕西省西安市高新区锦业一路56号研祥城市广场A座2505</p>
+        </div>
+        <div class="box3" style="margin-left: 10%;">
+            <img src="../image/xidian.png" width="224" height="60" />
+            <p>合作单位：西安电子科技大学</p>
+            <p>地址：陕西省西安市西沣路兴隆段266号（南校区）</p>
+        </div>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+
+

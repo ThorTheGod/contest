@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <script  src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" ></script>
+    <title>我要参赛</title>
+    <link rel="stylesheet" type="text/css" href="../css/competition.css">
+</head>
+
+<body>
+    <div id='section1'>
+        <div class='nav'>
+            <ul class='navbar'>
+                <span id='nav1' style="float:left">
+                    <li id="nav11" style="width: 150px"><a href="../html/mainweb.html"> 首页</a></li>
+                    <li id="nav12"><a href="../html/about.html">关于竞赛</a></li>
+                    <li id="nav13"><a href="../html/competition.html">我要参赛</a></li>
+                    <li id="nav14" style="width: 150px"><a href="../html/ranking.html">排行榜</a></li>
+                </span>
+                <span id='nav2'>
+                <li id='nav22' style="padding: 22px 10px;float:right;"><a href="javascript:exitshow()">退出</a></li>
+                <li id='nav21' style="padding: 22px 10px;float:right;"><a href="../html/personal-center.html">欢迎</a></li>
+                <img src='../image/head-portrait.png' style="float: right;margin-top: 5px;"/>
+                </span>
+            </ul>
+        </div>
+        <div id='img1'></div>
+    </div>
+
+    <div id="section2">
+        <div class="box1">
+            <p><img src="../image/position.png" align="left" style="margin-right: 17px;">首页 | 我要参赛</p>
+        </div><br>
+    </div>
+
+    <div class='box2'>
+        <p>竞赛须知：</p>
+        <p>1.考试过程中每名考生只允许登录一台电脑作答，中途不可更换设备。</p>
+        <p>2.本着诚信考试的原则，必须由考生本人作答，不得有其他人从旁协助。</p>
+        <p>3.本次党史知识竞赛分为选择题、判断题两个部分，卷面总分共计100分，答题时间共计120分钟。</p>
+        <p>4.答题结束后系统会自动弹出“确认提交”的对话框，用户点击确认提交后，答题结束，系统自动阅卷评分。</p>
+        <p>5.请在考试规定的时间内作答，超过答题时间，考试成绩无效。</p>
+        <p>6.考试过程中禁止对考试内容进行拍照、截屏或录屏。</p>
+        <p>7.考生因其他原因中断考试的，视为考生自动放弃考试。</p>
+        <p>8.本次党史知识竞赛依据选手卷面得分由高到低进行排名；在选手得分相同的情况下，参考选手作答时间，答题时间更短的选手排名靠前；在选手卷面</p>
+        <p>得分和答题时间均相同的条件下，依照选手登录的先后顺序进行排名。</p>
+        <div style="margin-top: 40px;">
+            <p><input id="ty" type="checkBox" onclick="if (this.checked) {changelink()} else {changelink2()}">我已熟知竞赛规则，并将在竞赛期间严格遵守</p>
+            <button><a id="start" href="javascript:show1()" style="text-decoration: none;color: white;">开始答题</a></button>
+        </div>
+    </div>
+
+    <div id='footer'>
+        <ul class="clearfix">
+        <div class='box3' style="margin-left: 6%;">
+            <img src="../image/cnki-logo.png" width="140" height="47" />
+            <br/>
+            <br/>
+            <p>技术支持：同方知网（北京）技术有限公司陕西分公司</p>
+            <p>地址：陕西省西安市高新区锦业一路56号研祥城市广场A座2505</p>
+        </div>
+        <div class="box3" style="margin-left: 10%;">
+            <img src="../image/xidian-logo.png" width="224" height="60" />
+            <p>合作单位：西安电子科技大学</p>
+            <p>地址：陕西省西安市西沣路兴隆段266号（南校区）</p>
+        </div>
+        </ul>
+    </div>
+
+    <div id='remind'>
+        <div class="remind-box">
+            <div class="remind-box1">
+                <b>提醒</b>
+            </div>
+            <div class="remind-box2">
+                <p>请阅读本次竞赛相关规则，并确认遵守</p>
+            </div>
+            <div>
+                <button class="re-button"><a href="javascript:hide1()" style="text-decoration: none;color: white;">返回</a></button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/remind.js"></script>
+
+    
+    <div id='exit'>
+        <div class="exit-box">
+            <div class="exit-box1">
+                <b>退出确认</b>
+            </div>
+            <div class="exit-box2">
+                <p>您是否要退出登录？</p>
+            </div>
+            <div>
+                <button class="e-button2"><a href="../html/mainweb.html" style="text-decoration: none;color: white;">确认退出</a></button>    
+                <button class="e-button1"><a href="javascript:exithide()" style="text-decoration: none;color: black;">返回</a></button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/competition.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/exit.js"></script>
+</body>
+</html>
+
+
+
+
